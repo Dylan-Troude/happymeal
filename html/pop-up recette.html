@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Recettes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style-pop-up-recette.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid d-flex align-items-center position-relative px-3">
+            <a class="navbar-brand d-flex align-items-center me-3" href="#">
+                <img src="../assets/logo.png" alt="Logo" class="logo-img">
+            </a>
+            <form class="search-form me-auto" role="search">
+                <input class="form-control search-input" type="search" placeholder="Recherche..." aria-label="Search">
+            </form>
+            <div class="title-center d-none d-lg-block">
+                Happy Meal
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navLinks">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link nav-hover" href="#">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link nav-hover" href="#">Recette</a></li>
+                    <li class="nav-item"><a class="nav-link nav-hover" href="#">Favoris</a></li>
+                    <li class="nav-item"><a class="nav-link nav-hover" href="#">Ingrédients</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center">Nos Recettes</h1>
+        <ul id="recettes-list" class="list-group"></ul>
+    </div>
+
+    <div id="popup" class="popup w-100 w-md-75">
+        <div class="popup-content">
+            <button id="closePopup" class="btn btn-danger">Fermer</button>
+            <h2 id="popup-nom"></h2>
+            <p id="popup-temps"></p>
+            <div class="d-flex justify-content-center">
+                <img id="popup-image" class="img-fluid" alt="Image de la recette">
+            </div>
+            
+            <h3>Ingrédients</h3>
+            <ul id="popup-ingredients" class="list-group"></ul>
+            <button id="generateShoppingList" class="btn btn-primary mb-4 w-100 w-md-75">Générer la liste de courses</button>
+            <h3>Étapes</h3>
+            <ol id="popup-etapes" class="list-group list-group-numbered"></ol>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popupOverlay"></div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Happy Meal. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/script-pop-up-recette.js"></script>
+</body>
+</html>
+
+
+
